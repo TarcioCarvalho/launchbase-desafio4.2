@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
+:root{
+    --primary-color: #7159c1;
+    --secondary-color:#F7DF1E;
+    --links-color: #00FF7F;
+} 
+
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: rgba(10,10,10,0.8);
+}
+
+header{
+    background-color: var(--primary-color);
+    width: 100%;
+    padding: 32px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.links a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 22px;
+    position: relative;
+}
+
+.links a + a{
+    margin-left: 32px;
+}
+
+.links a::after{
+    content: "";
+    width: 0;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    background-color: var(--links-color);
+    
+}
+
+links a.active{
+    font-weight: bold;
+    color: var(--links-color);
+}
+
+.links a:hover{
+    transition: 200ms;
+    color: var(--links-color);
+}
+
+.links a:hover::after{
+    width: 100%;
+    transition: width 200ms ease-in-out;
+}
+
+/* --- CARD ---*/
+.card{
+    background-color: #fff;
+    width: 800px;
+    min-height: 400px;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    border-radius: 16px;
+    box-shadow: #777 0px 2px 6px -2px;
+
+    animation: up 200ms ease-in-out;
+}
+
+@keyframes up {
+    from { /*begining of animation */
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to{ /* end of animation */
+        opacity: 1;
+    }        
+}
+
+.details {
+    margin: 16px 40px;
+}
+
+.details h3{
+    text-transform: uppercase;
+    color: var(--primary-color);
+    letter-spacing: 0.8px;
+}
+
+.details .item{
+    margin: 8px 0;
+    padding: 16px 0;
+    border-top: 2px solid rgba(10,10,10,0.3);
+    line-height: 1.5;
+}
+
+.details .item div:nth-child(1){
+    color: #777;
+    font-size: 14px;
+}
+
+.details .item span:nth-child(2){
+    margin-left: 24px;
+}
+
+.details .item, .detail span{
+    font-size: 18px;
+}
+
+.details .item span{
+    background-color: var(--secondary-color);
+    padding: 8px;
+    border-radius: 16px;
+    display: inline-block;
+    margin-top: 6px;
+
+}
+
+/* Form */
+input, select{
+    width: 100%;
+    outline: none;
+    color: #555;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+input[type=radio]{
+    width: initial;
+    margin-right: 8px;
+}
+
+input::placeholder{
+    font-size: 18px;
+    font-weight: normal;
+}
+
+form select{
+    background-color:transparent;
+}
+
+button[type=submit]{
+padding: 8px 16px;
+width: 100%;
+color: #fff;
+font-size: 16px;
+font-weight: bold;
+background-color: var(--primary-color);
+border-radius: 4px;
+margin: 16px 0;
+}
+
+button{
+    transition: 150ms;
+}
+
+button:hover{
+    opacity: 0.9;
+}

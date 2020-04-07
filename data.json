@@ -1,0 +1,17 @@
+{
+  "teachers": [
+    {
+      "id": 1,
+      "avatar_url": "http://www.google.com",
+      "name": [
+        "Fernanda Vieira",
+        "Matemática e Física"
+      ],
+      "birth": 1577836800000,
+      "gender": "F",
+      "degree": "Ensino Médio Completo",
+      "education_type": "Presencial",
+      "created_at": 1586117867738
+    }
+  ]
+}

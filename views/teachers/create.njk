@@ -1,0 +1,63 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+<title>Rocketseat - Teachers</title>
+{% endblock head %}
+
+{% block content %}
+    <form class="card" method="POST" action="/teachers">
+        <section class="avatar" style="border-radius: 16px 0 0 16px; background: url(https://source.unsplash.com/collection/9739621/500x500) no-repeat center center/ cover"></section>
+
+        <section class="details">
+            <h3>Novo professor</h3>
+
+            <div class="item">
+                <div>Avatar URL</div>
+                <input type="url" name="avatar_url" placeholder="http://">
+            </div>
+
+            <div class="item">
+                <div>Nome Completo</div>
+                <input type="text" name="name" placeholder="Nome do professor">
+            </div>
+
+            <div class="item">
+                <div>Data de nascimento</div>
+                <input type="date" name="birth">
+            </div>
+
+            <div class="item">
+                <div>Sexo</div>
+                <span><input type="radio" name="gender" Value="M" checked>Masculino</span>
+                <span><input type="radio" name="gender" Value="F">Feminino</span>
+            </div>
+
+            <div class="item">
+                <div>Grau de escolaridade</div>
+                <select name="degree">
+                    <option value="Ensino Médio Completo">Ensino Médio Completo</option>
+                    <option value="Ensino Superior Completo">Ensino Superior Completo</option>
+                    <option value="Mestrado">Mestrado</option>
+                    <option value="Doutorado">Doutorado</option>
+                </select>
+            </div>
+
+            <div class="item">
+                <div>Tipo de Aula</div>
+                <div>
+                    <span><input type="radio" name="education_type" Value="Presencial"checked>Presencial</span>
+                    <span><input type="radio" name="education_type" Value="EAD">EAD</span>
+                </div>
+            </div>
+
+            <div class="item">
+                <div>Área de atuação</div>
+                <input type="text" name="name" placeholder="Digite as disciplinas lecionadas">
+            </div>
+
+            <button type="submit">Salvar</button>
+        </section>
+    </form>
+{% endblock content %}
+
+
